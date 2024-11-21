@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D586B72F2CEE594900021080 /* Shika-KeyBoard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D586B7282CEE594900021080 /* Shika-KeyBoard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D5062F1D2CEE4F98000BD865 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +25,45 @@
 			remoteGlobalIDString = D5062F0B2CEE4F97000BD865;
 			remoteInfo = "Shika-InputMethod";
 		};
+		D586B72D2CEE594900021080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5062F042CEE4F97000BD865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D586B7272CEE594900021080;
+			remoteInfo = "Shika-KeyBoard";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D586B7342CEE594900021080 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D586B72F2CEE594900021080 /* Shika-KeyBoard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D5062F0C2CEE4F97000BD865 /* Shika-InputMethod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shika-InputMethod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5062F1C2CEE4F98000BD865 /* Shika-InputMethodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shika-InputMethodTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5062F262CEE4F98000BD865 /* Shika-InputMethodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shika-InputMethodUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D586B7282CEE594900021080 /* Shika-KeyBoard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Shika-KeyBoard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D586B7302CEE594900021080 /* Exceptions for "Shika-KeyBoard" folder in "Shika-KeyBoard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D586B7272CEE594900021080 /* Shika-KeyBoard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D5062F0E2CEE4F97000BD865 /* Shika-InputMethod */ = {
@@ -43,6 +79,14 @@
 		D5062F292CEE4F98000BD865 /* Shika-InputMethodUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Shika-InputMethodUITests";
+			sourceTree = "<group>";
+		};
+		D586B7292CEE594900021080 /* Shika-KeyBoard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D586B7302CEE594900021080 /* Exceptions for "Shika-KeyBoard" folder in "Shika-KeyBoard" target */,
+			);
+			path = "Shika-KeyBoard";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D586B7252CEE594900021080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +129,7 @@
 				D5062F0E2CEE4F97000BD865 /* Shika-InputMethod */,
 				D5062F1F2CEE4F98000BD865 /* Shika-InputMethodTests */,
 				D5062F292CEE4F98000BD865 /* Shika-InputMethodUITests */,
+				D586B7292CEE594900021080 /* Shika-KeyBoard */,
 				D5062F0D2CEE4F97000BD865 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +140,7 @@
 				D5062F0C2CEE4F97000BD865 /* Shika-InputMethod.app */,
 				D5062F1C2CEE4F98000BD865 /* Shika-InputMethodTests.xctest */,
 				D5062F262CEE4F98000BD865 /* Shika-InputMethodUITests.xctest */,
+				D586B7282CEE594900021080 /* Shika-KeyBoard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,10 +155,12 @@
 				D5062F082CEE4F97000BD865 /* Sources */,
 				D5062F092CEE4F97000BD865 /* Frameworks */,
 				D5062F0A2CEE4F97000BD865 /* Resources */,
+				D586B7342CEE594900021080 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D586B72E2CEE594900021080 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D5062F0E2CEE4F97000BD865 /* Shika-InputMethod */,
@@ -163,6 +218,28 @@
 			productReference = D5062F262CEE4F98000BD865 /* Shika-InputMethodUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D586B7272CEE594900021080 /* Shika-KeyBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D586B7312CEE594900021080 /* Build configuration list for PBXNativeTarget "Shika-KeyBoard" */;
+			buildPhases = (
+				D586B7242CEE594900021080 /* Sources */,
+				D586B7252CEE594900021080 /* Frameworks */,
+				D586B7262CEE594900021080 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D586B7292CEE594900021080 /* Shika-KeyBoard */,
+			);
+			name = "Shika-KeyBoard";
+			packageProductDependencies = (
+			);
+			productName = "Shika-KeyBoard";
+			productReference = D586B7282CEE594900021080 /* Shika-KeyBoard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +261,9 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = D5062F0B2CEE4F97000BD865;
 					};
+					D586B7272CEE594900021080 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
 			buildConfigurationList = D5062F072CEE4F97000BD865 /* Build configuration list for PBXProject "Shika-InputMethod" */;
@@ -203,6 +283,7 @@
 				D5062F0B2CEE4F97000BD865 /* Shika-InputMethod */,
 				D5062F1B2CEE4F98000BD865 /* Shika-InputMethodTests */,
 				D5062F252CEE4F98000BD865 /* Shika-InputMethodUITests */,
+				D586B7272CEE594900021080 /* Shika-KeyBoard */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +304,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5062F242CEE4F98000BD865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D586B7262CEE594900021080 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +341,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D586B7242CEE594900021080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +360,11 @@
 			isa = PBXTargetDependency;
 			target = D5062F0B2CEE4F97000BD865 /* Shika-InputMethod */;
 			targetProxy = D5062F272CEE4F98000BD865 /* PBXContainerItemProxy */;
+		};
+		D586B72E2CEE594900021080 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D586B7272CEE594900021080 /* Shika-KeyBoard */;
+			targetProxy = D586B72D2CEE594900021080 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shika-InputMethod/Preview Content\"";
+				DEVELOPMENT_TEAM = 9H5U9ZC7JV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,6 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Shika-InputMethod/Preview Content\"";
+				DEVELOPMENT_TEAM = 9H5U9ZC7JV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -512,6 +614,56 @@
 			};
 			name = Release;
 		};
+		D586B7322CEE594900021080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9H5U9ZC7JV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shika-KeyBoard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shika-KeyBoard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Funno.Shika-InputMethod.Shika-KeyBoard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D586B7332CEE594900021080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9H5U9ZC7JV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Shika-KeyBoard/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Shika-KeyBoard";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Funno.Shika-InputMethod.Shika-KeyBoard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +699,15 @@
 			buildConfigurations = (
 				D5062F372CEE4F98000BD865 /* Debug */,
 				D5062F382CEE4F98000BD865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D586B7312CEE594900021080 /* Build configuration list for PBXNativeTarget "Shika-KeyBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D586B7322CEE594900021080 /* Debug */,
+				D586B7332CEE594900021080 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
