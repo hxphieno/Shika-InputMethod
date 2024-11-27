@@ -11,11 +11,64 @@ import UIKit
 class KeyboardViewController: UIInputViewController {
 
     @IBOutlet var nextKeyboardButton: UIButton!
+    var keyButtonList:[UIButton]=[]
+    let ButtonTitles=[["Q","W","E","R","T","Y","U","I","O","P"],
+                      ["A","S","D","F","G","H","J","K","L"],
+                      ["Z","X","C","V","B","N","M"]]
+    func setUpKeyBoard(){
+        let buttonHeight:CGFloat = 45
+        let horizontalPadding:CGFloat=10
+        let verticalPadding:CGFloat=5
+        let buttonSpacing:CGFloat=5
+        
+        var previousRowBottom:CGFloat = 0
+        for row in ButtonTitles{
+            let stackView=UIStackView()
+            stackView.axis = .horizontal
+            stackView.alignment = .center
+            stackView.distribution = .equalSpacing
+            stackView.spacing = buttonSpacing
+            
+            var letterButtons:[UIButton]=[]
+            for title in row{
+                let button=UIButton(type: .system)
+                button.setTitle(title, for: [])
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+                button.setTitleColor(UIColor.black, for: [])
+                button.backgroundColor = UIColor.systemGray5
+                button.layer.cornerRadius=5
+                button.layer.masksToBounds=true
+                button.translatesAutoresizingMaskIntoConstraints=false
+                button.addTarget(self, action: #selector(letterButtonTapped(_:)), for: .touchUpInside)
+                
+                stackView.addArrangedSubview(button)
+                letterButtons.append(button)
+            }
+            stackView.translatesAutoresizingMaskIntoConstraints=false
+            self.view.addSubview(stackView)
+            
+            NSLayoutConstraint.activate([
+                            stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: horizontalPadding),
+                            stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -horizontalPadding),
+                            stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: previousRowBottom + verticalPadding),
+                            stackView.heightAnchor.constraint(equalToConstant: buttonHeight)
+                        ])
+                        
+            previousRowBottom += buttonHeight + verticalPadding
+        }
+    }
+    @objc func letterButtonTapped(_ sender:UIButton){
+        let proxy=self.textDocumentProxy
+        if let letter = sender.title(for: .normal){
+            proxy.insertText(letter)
+        }
+    }
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        
+        setUpKeyBoard()
         // Add custom view sizing constraints here
+
     }
     
     override func viewDidLoad() {
